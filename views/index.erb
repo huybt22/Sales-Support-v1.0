@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chot Don Hang</title>
+</head>
+<body>
+	    <h1>Chot don hang</h1>
+    <br>
+    <form>
+	    <label>Ho ten khach hang</label>
+	    <input type="text" placeholder="Nhap ho ten khach hang" name="username" id="username" value='<%=username%>'>
+	    <br>
+	    <label>Dia chi</label>
+	    <input type="text" placeholder="Nhap dia chi" name="address" id="address" value='<%=address%>'>
+	    <br>
+	    <label>Nhap SDT</label>
+	    <input type="text" placeholder="Nhap SDT" name="phone" id="phone" value="<%=phone%>">
+	    <br>
+	    <label>Ten san pham</label>
+	    <input type="text" placeholder="Nhap ten san pham" name="productname" id="productname" value='<%=product.join(', ')%>'>
+	    <br>
+	    <label>So luong</label>
+	    <input type="text" placeholder="Nhap so luong" name="quantity" id="quantity" value='<%=quantity.join(', ')%>'>
+	    <br>
+	    <label>Gia tien</label>
+	    <input type="text" placeholder="Nhap gia tien" name="price" id="price" value='<%=price.join(', ')%>'>
+	     <input value='submit!' type='submit'></input>
+ 	</form>
+    <br>
+    <br>
+    <div>
+    	<p>Ho ten khach hang: <%= username %></p>
+    	<p>Dia chi: <%= address %></p>
+    	<p>Sdt: <%= phone %></p>
+    	<p>San Pham:</p>
+    	<% if product != nil %>
+    	 <% for i in (0...product.length) %>
+    	<%= (i+1).to_s + '/ ' + product[i].upcase %>
+    	<p>Gia tien: <%= price[i] %></p>
+    	<p>So luong <%= quantity[i]%></p>
+    	 <% end %>
+    	 <% end%>
+    	<p>So tien: <%= price_sum %></p>
+    	<p>Minh cam on nhieu nha</p>
+
+    </div>
+</body>
+</html>
