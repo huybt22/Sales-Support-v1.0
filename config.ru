@@ -1,2 +1,2 @@
-require './chotdonhang'
+require './main'
 run Sinatra::Application
