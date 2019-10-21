@@ -17,13 +17,23 @@
 	    <input type="text" placeholder="Nhap SDT" name="phone" id="phone" value="<%=phone%>">
 	    <br>
 	    <label>Ten san pham</label>
-	    <input type="text" placeholder="Nhap ten san pham" name="productname" id="productname" value='<%=product.join(', ')%>'>
+	    <input type="text" placeholder="Nhap ten san pham" name="productname" id="productname" value='
+	    <% if product != nil %>
+<%=product.join(', ')%>
+	    <%end%>'>
 	    <br>
 	    <label>So luong</label>
-	    <input type="text" placeholder="Nhap so luong" name="quantity" id="quantity" value='<%=quantity.join(', ')%>'>
+	    <input type="text" placeholder="Nhap so luong" name="quantity" id="quantity" 
+	    value='
+	    <% if quantity != nil %>
+<%=quantity.join(', ')%>
+	    <% end %>'>
 	    <br>
 	    <label>Gia tien</label>
-	    <input type="text" placeholder="Nhap gia tien" name="price" id="price" value='<%=price.join(', ')%>'>
+	    <input type="text" placeholder="Nhap gia tien" name="price" id="price" value='
+	    <% if price != nil %>
+<%=price.join(', ')%>
+	    <% end %>'>
 	     <input value='submit!' type='submit'></input>
  	</form>
     <br>
